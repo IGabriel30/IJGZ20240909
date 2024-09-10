@@ -62,7 +62,7 @@ public class ProductIJGZController {
 
 
     @DeleteMapping("/{id}")
-    public ResponseEntity eliminar(@PathVariable Integer id){
+    public ResponseEntity<String> eliminar(@PathVariable Integer id){
         productIJGZService.eliminarPorId(id);
         return ResponseEntity.ok("Producto eliminado correctamente");
     }
