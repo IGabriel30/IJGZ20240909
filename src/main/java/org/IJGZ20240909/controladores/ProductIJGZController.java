@@ -28,6 +28,8 @@ public class ProductIJGZController {
         return ResponseEntity.notFound().build();
     }
 
+    //eENLISTAR
+
     @GetMapping("/lista")
     public ResponseEntity<List<ProductIJGZSalida>> mostrarTodos(){
         List<ProductIJGZSalida> productos = productIJGZService.obtenerTodos();
@@ -48,6 +50,7 @@ public class ProductIJGZController {
         return ResponseEntity.notFound().build();
     }
 
+    //CREAR
     @PostMapping
     public ResponseEntity<ProductIJGZSalida> crear(@RequestBody ProductIJGZGuardar productGuardar){
         ProductIJGZSalida producto = productIJGZService.crear(productGuardar);
